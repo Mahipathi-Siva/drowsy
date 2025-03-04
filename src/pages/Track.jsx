@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { io } from "socket.io-client";
 import { Link, useNavigate } from 'react-router-dom';
 import './Track.css';
+import {getEmail} from "../lib/localStorage";
 
 const Monitoring = () => {
   const [isStreaming, setIsStreaming] = useState(false);
@@ -15,8 +16,14 @@ const Monitoring = () => {
 
   // Start capturing the camera and sending frames to backend
   const handleStart = async () => {
+    // Retrieve email from local storage
+    const email = getEmail();
+
     if (!socketRef.current) {
-      socketRef.current = io(process.env.REACT_APP_API_URL);
+      // Connect to socket and pass email
+      socketRef.current = io(process.env.REACT_APP_API_URL, {
+        query: { email }
+      });
     }
 
     try {
