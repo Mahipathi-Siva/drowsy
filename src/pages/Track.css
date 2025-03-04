@@ -1,0 +1,162 @@
+/* src/Monitoring.css */
+.monitoring-container {
+    min-height: 100vh;
+    background: linear-gradient(to right, #e0f7fa, #e8e1fa);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+  }
+  
+  .nav-links a:hover {
+    color: #007bff;
+  }
+  
+  .logout-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+  
+  .logout-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Monitoring Content */
+  .monitoring-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  
+  .monitoring-left {
+    flex: 3;
+  }
+  
+  .monitoring-left h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Video Container */
+  .video-container {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio (9/16 * 100 = 56.25) */
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .video-feed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the entire video is visible without cropping */
+    border-radius: 10px;
+  }
+  
+  .video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  /* Monitoring Buttons */
+  .monitoring-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .start-btn,
+  .stop-btn {
+    background-color: #00c853;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .start-btn:disabled,
+  .stop-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Alerts Section */
+  .alerts-section {
+    flex: 1;
+    background: linear-gradient(to bottom, #e0f7fa, #e8e1fa);
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 20px;
+  }
+  
+  .alerts-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .alerts-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .alerts-list li {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .alerts-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #333;
+    font-size: 1.2em;
+  }
