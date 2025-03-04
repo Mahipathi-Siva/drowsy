@@ -22,7 +22,7 @@ const Logout = () => {
 
       try {
         // Call the logout API
-        const response = await fetch('http://127.0.0.1:5000/auth/logout', {
+        const response = await fetch(process.env.REACT_APP_API_URL+'/auth/logout', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

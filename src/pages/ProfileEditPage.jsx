@@ -47,7 +47,7 @@ const ProfileEdit = () => {
     const token=getToken();
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/user/edit_profile', {
+      const response = await fetch(process.env.REACT_APP_API_URL+'/user/edit_profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

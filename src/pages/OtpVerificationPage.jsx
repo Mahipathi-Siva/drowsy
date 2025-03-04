@@ -117,7 +117,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://127.0.0.1:5000/auth/otp_verification", {
+      const response = await fetch(process.env.REACT_APP_API_URL+"/auth/otp_verification", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

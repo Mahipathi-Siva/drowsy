@@ -120,7 +120,7 @@ const LoginPage = () => {
     e.preventDefault();
     setResponseMessage(null); // Clear any previous messages
     try {
-      const response = await fetch("http://127.0.0.1:5000/auth/login", {
+      const response = await fetch(process.env.REACT_APP_API_URL+'/auth/login', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

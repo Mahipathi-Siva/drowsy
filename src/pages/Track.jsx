@@ -16,7 +16,7 @@ const Monitoring = () => {
   // Start capturing the camera and sending frames to backend
   const handleStart = async () => {
     if (!socketRef.current) {
-      socketRef.current = io("http://127.0.0.1:5000");
+      socketRef.current = io(process.env.REACT_APP_API_URL);
     }
 
     try {
@@ -55,7 +55,7 @@ const Monitoring = () => {
   // Stop capturing frames, call backend /stop_video, and refresh page
   const handleStop = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/stop_video");
+      const response = await fetch(process.env.REACT_APP_API_URL+"/stop_video");
       const data = await response.json();
       console.log(data.message);
     } catch (error) {
@@ -128,7 +128,7 @@ const Monitoring = () => {
           <div className="video-container">
             {isStreaming ? (
               <img
-                src="http://127.0.0.1:5000/video"
+                src={`${process.env.REACT_APP_API_URL}/video`}
                 alt="Live Video Feed"
                 className="video-feed"
               />

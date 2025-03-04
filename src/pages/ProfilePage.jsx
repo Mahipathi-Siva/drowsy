@@ -18,7 +18,7 @@ function ProfilePage() {
     setIsLoaded(true);
     
     // API Call
-    fetch("http://127.0.0.1:5000/user/profile", {
+    fetch(process.env.REACT_APP_API_URL+"/user/profile", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
