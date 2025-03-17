@@ -93,8 +93,8 @@ const Monitoring = () => {
       <nav className="navbar">
         <div className="logo">SafeDrive</div>
         <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/statistics">Statistics</Link>
+          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/profile/edit">Edit Profile</Link>
           <Link to="/profile">Profile</Link>
           <button className="logout-btn" onClick={handleLogout}>
             LOGOUT
