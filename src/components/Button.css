@@ -1,0 +1,85 @@
+.btn {
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    text-align: center;
+    min-width: 120px;
+  }
+  
+  /* Default Primary Button */
+  .btn {
+    background-color: #2bff00;
+    color: white;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Logout Button */
+  .logout-btn {
+    background-color: #dc3545; /* Red color */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Secondary Button */
+  .btn.secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .btn.secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Success Button */
+  .btn.success {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .btn.success:hover {
+    background-color: #218838;
+  }
+  
+  /* Danger Button */
+  .btn.danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn.danger:hover {
+    background-color: #c82333;
+  }
+  
+  /* Warning Button */
+  .btn.warning {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .btn.warning:hover {
+    background-color: #e0a800;
+  }
+  
+  /* Disabled Button */
+  .btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  

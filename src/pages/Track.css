@@ -32,11 +32,11 @@
   }
   
   .logout-btn {
-    background-color: #007bff;
+    background-color: #002aff;
     color: white;
     border: none;
     padding: 8px 16px;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 1em;
     text-transform: uppercase;

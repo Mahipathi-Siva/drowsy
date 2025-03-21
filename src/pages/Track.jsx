@@ -20,9 +20,8 @@ const Monitoring = () => {
     const email = getEmail();
 
     if (!socketRef.current) {
-      // Connect to socket and pass email
       socketRef.current = io(process.env.REACT_APP_API_URL, {
-        query: { email }
+        query: { email } // Send email via query parameters
       });
     }
 
